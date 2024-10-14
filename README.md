@@ -23,12 +23,12 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── src/
 │   ├── components/
 │   │   ├── Card.astro
-|   |   ├── CardContainer.astro
-|   |   └── FormInputs.astro
+│   │   ├── CardContainer.astro
+│   │   └── FormInputs.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   ├── pages/
-│   |   └── index.astro
+│   │   └── index.astro
 │   └── utilis/
 │       ├── types.ts
 │       └── questions.json

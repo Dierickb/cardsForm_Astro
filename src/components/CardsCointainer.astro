@@ -1,6 +1,14 @@
 ---
+import type { Form, FormsCollection } from "../utils/types";
 import Card from "./Card.astro";
 import 'swiper/css';
+
+interface Props {
+	[data: string]: FormsCollection;
+}
+
+const { data } = Astro.props;
+const arrData: Array<Form> = Object.values(data);
 ---
 
 <swiper-container id="cards-container" 
@@ -13,27 +21,15 @@ import 'swiper/css';
     centered-slides="true"
     slides-per-view="2" coverflow-effect-slide-shadows="true"
 >
-    
-    <Card title="Form1"
-        questions=
-            {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
-        name='first'
-    />
-    <Card title="Form2" 
-        questions=
-            {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
-        name='second'
-    />
-    <Card title="Form3" 
-        questions=
-            {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
-        name='third'
-    />
-    <Card title="Form4" 
-        questions=
-            {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
-        name='third'
-    />
+    {
+        arrData.map(el => {
+            return <Card title={el?.title && el.title}
+                questions=
+                    {el?.questions && el.questions}
+                name={el?.cardName && el.cardName}
+            />
+        })
+    }
     
     <slot />
 </swiper-container>
@@ -68,4 +64,9 @@ import 'swiper/css';
 	form?.addEventListener("submit", submitForm);		
 </script>
 <style>
+    .mySwiper {
+        .swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper {
+            perspective: 1200px;
+        }
+    }
 </style>

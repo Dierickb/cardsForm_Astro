@@ -1,6 +1,8 @@
 ---
 import CardsCointainer from '../components/CardsCointainer.astro';
 import Layout from '../layouts/Layout.astro';
+
+import questions from '../utils/questions.json';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -9,8 +11,7 @@ import Layout from '../layouts/Layout.astro';
 			<h1>Welcome to <span class="text-gradient">Cards Slider</span></h1>
 		</header>
 		
-		
-		<CardsCointainer />
+		<CardsCointainer data={questions} />
 			
 	</main>
 </Layout>

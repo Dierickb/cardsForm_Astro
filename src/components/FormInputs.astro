@@ -1,0 +1,44 @@
+---
+interface Props {
+	name: string;
+    question: string;
+}
+
+const { name, question } = Astro.props;
+---
+
+<section class="form-inputs-container">
+    <p class="form-inputs-question">{question}</p>
+    <fieldset class="form-inputs" id={`${question}-terms`}>
+        <input type="radio" name={`${question}-${name}`} id={`${question}-terms-${name}-1`} value="1" checked>
+        <input type="radio" name={`${question}-${name}`} id={`${question}-terms-${name}-2`} value="2" >
+        <input type="radio" name={`${question}-${name}`} id={`${question}-terms-${name}-3`} value="3" >
+        <input type="radio" name={`${question}-${name}`} id={`${question}-terms-${name}-4`} value="4" >
+        <input type="radio" name={`${question}-${name}`} id={`${question}-terms-${name}-5`} value="5" >
+    </fieldset>
+</section>
+
+<style>
+    fieldset {
+        border-style: unset;
+        padding-bottom: 0.35em;
+    }
+    .form-inputs-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+        &:hover {
+            background: #4d566c;
+        }
+    }
+    .form-inputs {
+        input {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+    }
+</style>
+

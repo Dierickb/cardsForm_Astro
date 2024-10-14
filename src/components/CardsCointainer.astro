@@ -1,0 +1,39 @@
+---
+import Card from "./Card.astro";
+---
+
+<container id="cards-container">
+    <Card title="Form1" 
+    questions=
+        {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
+    name='first'/>
+</container>
+
+<script>
+    const $ = (selector: string): HTMLElement | null => document.querySelector(selector);
+	const formInput = (arr: HTMLInputElement[]): HTMLInputElement[] => {
+		return arr.filter(el => el.type === "radio" && el.checked);
+	}
+    const submitForm = (e: Event) => {
+		e.preventDefault();
+
+		const form = e.target as HTMLFormElement;
+		const formElements = Array.from(form.elements) as HTMLInputElement[];
+        const formInputs = formInput(formElements);
+        
+        const formValues = {
+            nameCard: formInputs[0].name.split("-")[1],
+            values: formInputs.map(el => {
+                return {
+                    question: el.name.split("-")[0],
+                    value: el.value,
+                }
+            }),
+        };
+
+        return formValues;
+	}
+    
+    const form = $("#cards-container");
+	form?.addEventListener("submit", submitForm);		
+</script>

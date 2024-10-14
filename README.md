@@ -1,7 +1,7 @@
-# Astro Starter Kit: Basics
+# Astro 3D Slider Card: Basics
 
 ```sh
-npm create astro@latest -- --template basics
+git clone https://github.com/Dierickb/cardsForm_Astro.git
 ```
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
@@ -22,11 +22,16 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├── Card.astro
+|   |   ├── CardContainer.astro
+|   |   └── FormInputs.astro
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   |   └── index.astro
+│   └── utilis/
+│       ├── types.ts
+│       └── questions.json
 └── package.json
 ```
 

@@ -15,6 +15,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 	</head>
 	<body>
 		<slot />
@@ -35,6 +36,15 @@ const { title } = Astro.props;
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
+		height: 100%;
+	}
+	body {
+		min-height: 100vh;
+		margin: 0;
+	}
+	main{
+		width: 90%;
+		min-height: calc(100vh - 60px);
 	}
 	code {
 		font-family:
@@ -47,4 +57,22 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+	
+	swiper-container {
+      width: 100%;
+      height: 56vh;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-container {
+      margin-left: auto;
+      margin-right: auto;
+    }
 </style>

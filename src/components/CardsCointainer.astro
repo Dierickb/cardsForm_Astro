@@ -1,13 +1,43 @@
 ---
 import Card from "./Card.astro";
+import 'swiper/css';
 ---
 
-<container id="cards-container">
-    <Card title="Form1" 
-    questions=
-        {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
-    name='first'/>
-</container>
+<swiper-container id="cards-container" 
+    class="mySwiper"
+    pagination="true" 
+    effect="coverflow"
+    
+    navigation="true" 
+    loop="true"
+    centered-slides="true"
+    slides-per-view="2" coverflow-effect-slide-shadows="true"
+>
+    
+    <Card title="Form1"
+        questions=
+            {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
+        name='first'
+    />
+    <Card title="Form2" 
+        questions=
+            {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
+        name='second'
+    />
+    <Card title="Form3" 
+        questions=
+            {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
+        name='third'
+    />
+    <Card title="Form4" 
+        questions=
+            {['Question_1', 'Question_2', 'Question_3', 'Question_4', 'Question_5']}
+        name='third'
+    />
+    
+    <slot />
+</swiper-container>
+
 
 <script>
     const $ = (selector: string): HTMLElement | null => document.querySelector(selector);
@@ -30,10 +60,12 @@ import Card from "./Card.astro";
                 }
             }),
         };
-
+        console.log(formValues);
         return formValues;
 	}
     
     const form = $("#cards-container");
 	form?.addEventListener("submit", submitForm);		
 </script>
+<style>
+</style>

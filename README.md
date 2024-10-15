@@ -1,14 +1,13 @@
-# Astro Starter Kit: Basics
+# Astro 3D Slider Card: Basics
 
 ```sh
-npm create astro@latest -- --template basics
+git clone https://github.com/Dierickb/cardsForm_Astro.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/Dierickb/cardsForm_Astro)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/Dierickb/cardsForm_Astro/master)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🧑‍🚀 Reason to do it? One time at university, I needed it and didn’t know how to do it. Now, I had no idea how to do it, but I learned it and did it.
 
 ![just-the-basics](https://github.com/user-attachments/assets/4caa55c6-bcee-4afd-83b7-e6c15332ddf3)
 
@@ -22,11 +21,16 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   ├── Card.astro
+│   │   ├── CardContainer.astro
+│   │   └── FormInputs.astro
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── utilis/
+│       ├── types.ts
+│       └── questions.json
 └── package.json
 ```
 

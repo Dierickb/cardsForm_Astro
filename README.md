@@ -7,7 +7,7 @@ git clone https://github.com/Dierickb/cardsForm_Astro.git
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/Dierickb/cardsForm_Astro)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/Dierickb/cardsForm_Astro/master)
 
-> 🧑‍🚀 **Reason to do it?** One time at university I need it and I didn't know how to do it. Now I had no idea how do it but I learned it and I do it.
+> 🧑‍🚀 **Reason to do it? One time at university, I needed it and didn’t know how to do it. Now, I had no idea how to do it, but I learned it and did it.
 
 ![just-the-basics](https://github.com/user-attachments/assets/4caa55c6-bcee-4afd-83b7-e6c15332ddf3)
 

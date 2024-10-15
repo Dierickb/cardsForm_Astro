@@ -18,7 +18,17 @@ const arrData: Array<Form> = Object.values(data);
     navigation="true" 
     loop="true"
     centered-slides="true"
-    slides-per-view="2" coverflow-effect-slide-shadows="true"
+    slides-per-view="2" 
+    coverflow-effect-slide-shadows="true"
+    
+    mousewheel="true"
+    thresholdTime="1"
+    sensitivity="0,1"
+    speed="650"
+    grab-cursor="true"
+    coverflow-effect-rotate="80"
+    coverflow-effect-stretch="0"
+    coverflow-effect-depth="400"
 >
     {
         arrData.map(el => {
